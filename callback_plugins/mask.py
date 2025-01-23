@@ -2,7 +2,7 @@ from ansible_collections.community.general.plugins.callback.yaml import Callback
 import collections
 
 DOCUMENTATION = """
-author: Jakub Wolynko <jakub@jakubwolynko.eu>
+author: Jakub Wolynko <keen.sand8462@fastmail.com>
 name: mask
 type: stdout
 short_description: mask data, that match the regexp
