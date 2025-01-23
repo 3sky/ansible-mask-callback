@@ -1,0 +1,22 @@
+- name: Example 1 - debug challanges
+  hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vault.yaml
+  tasks:
+
+    - name: Debug username
+      ansible.builtin.debug:
+        var: user
+
+    - name: Debug password
+      ansible.builtin.debug:
+        var: password
+
+    - name: Debug PASSWORD
+      ansible.builtin.debug:
+        var: PASSWORD
+
+    - name: Debug master_sops
+      ansible.builtin.debug:
+        var: master_sops
