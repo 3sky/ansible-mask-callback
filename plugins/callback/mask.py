@@ -4,7 +4,7 @@ import collections
 DOCUMENTATION = """
 author: Jakub Wolynko <jakub@jakubwolynko.eu>
 name: mask
-type: stdout
+type: awx_display
 short_description: mask data, that match the regexp
 description:
     - mask matched string with ***
@@ -29,7 +29,7 @@ EXAMPLES = r'''
 ansible.cfg: >
   # Enable plugin
   [defaults]
-  stdout_callback = mask
+  awx_display_callback = mask
 
   [callback_mask]
   # adding keywords here will override defaults
@@ -38,7 +38,7 @@ ansible.cfg: >
 
 class CallbackModule(CallbackModule_default):
     CALLBACK_VERSION = 2.0
-    CALLBACK_TYPE = "stdout"
+    CALLBACK_TYPE = "awx_display"
     CALLBACK_NAME = "mask"
 
     def __init__(self):
