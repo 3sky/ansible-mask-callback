@@ -51,6 +51,8 @@ class CallbackModule(CallbackModule_default):
 
         self.sensitive_keywords = self.get_option('sensitive_keywords').split(',')
 
+        print("Debug form callback")
+
     def v2_runner_on_start(self, host, task):
         return True
 
