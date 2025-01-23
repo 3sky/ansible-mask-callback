@@ -4,7 +4,7 @@ import collections
 DOCUMENTATION = """
 author: Jakub Wolynko <jakub@jakubwolynko.eu>
 name: mask
-type: awx_display
+type: stdout
 short_description: mask data, that match the regexp
 description:
     - mask matched string with ***
@@ -38,7 +38,7 @@ ansible.cfg: >
 
 class CallbackModule(CallbackModule_default):
     CALLBACK_VERSION = 2.0
-    CALLBACK_TYPE = "awx_display"
+    CALLBACK_TYPE = "stdout"
     CALLBACK_NAME = "mask"
 
     def __init__(self):
